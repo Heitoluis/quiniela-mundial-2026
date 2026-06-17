@@ -1,0 +1,82 @@
+name: Actualizar resultados
+
+# Consulta worldcup26.ir desde el servidor de GitHub (no desde el navegador del
+# usuario) y guarda los datos en results.json dentro del propio repositorio.
+# Asi la pagina lee los marcadores desde su mismo dominio (GitHub Pages),
+# sin depender de que cada visitante alcance un servidor externo lento/inestable.
+
+on:
+  schedule:
+    # GitHub permite como minimo cada 5 minutos. En la practica puede demorarse
+    # mas (10-15 min) en horas de mucha carga; es una limitacion de GitHub.
+    - cron: '*/5 * * * *'
+  workflow_dispatch: {}   # permite ejecutarlo manualmente desde la pestania Actions
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-results
+  cancel-in-progress: false
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Descargar resultados desde worldcup26.ir
+        run: |
+          set -e
+          API="https://worldcup26.ir/get/games"
+          ok=0
+          for i in 1 2 3 4 5 6; do
+            code=$(curl -s -m 60 \
+              -H "Accept: application/json" \
+              -H "Origin: https://heitoluis.github.io" \
+              -o results.new.json -w "%{http_code}" \
+              "$API" || echo "000")
+            if [ "$code" = "200" ] && jq -e '.games | length > 0' results.new.json >/dev/null 2>&1; then
+              ok=1
+              echo "Datos obtenidos en el intento $i (HTTP $code)."
+              break
+            fi
+            echo "Intento $i fallido (HTTP $code). Reintentando en 12s..."
+            sleep 12
+          done
+
+          if [ "$ok" != "1" ]; then
+            echo "::warning::No se pudo obtener datos validos. Se conserva el results.json anterior."
+            rm -f results.new.json
+            exit 0
+          fi
+
+          # Comparar solo el arreglo de juegos contra la version ya publicada.
+          # Si los marcadores no cambiaron, no commiteamos (evita ruido y
+          # reconstrucciones innecesarias de la pagina).
+          git show HEAD:results.json 2>/dev/null | jq -S '.games' > prev_games.json 2>/dev/null || echo 'null' > prev_games.json
+          jq -S '.games' results.new.json > curr_games.json
+
+          if cmp -s prev_games.json curr_games.json; then
+            echo "Los marcadores no cambiaron. No se commitea."
+            rm -f results.new.json prev_games.json curr_games.json
+            exit 0
+          fi
+
+          # Agregar marca de tiempo de actualizacion sin romper el formato { games: [...] }.
+          jq --arg ts "$(date -u +%FT%TZ)" '. + {updated_at: $ts}' results.new.json > results.json
+          rm -f results.new.json prev_games.json curr_games.json
+          echo "results.json actualizado."
+
+      - name: Commit y push si hubo cambios
+        run: |
+          if [ ! -f results.json ] || git diff --quiet -- results.json; then
+            echo "Sin cambios que commitear."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results.json
+          git commit -m "Actualizar resultados"
+          git push

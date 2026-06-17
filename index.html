@@ -1017,7 +1017,9 @@
 
 
     const DEFAULT_CONFIG = {
-      apiUrl: 'https://worldcup26.ir/get/games',
+      // Lee desde el propio dominio (GitHub Pages). Un workflow de GitHub Actions
+      // mantiene actualizado este results.json consultando worldcup26.ir.
+      apiUrl: './results.json',
       adapter: 'worldcup26',
       refreshMinutes: 5,
       autoRefresh: true,
@@ -1140,7 +1142,14 @@
 
     function loadConfig() {
       try {
-        return { ...DEFAULT_CONFIG, ...JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}') };
+        const cfg = { ...DEFAULT_CONFIG, ...JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}') };
+        // Migracion: visitantes recurrentes tienen guardada la URL antigua que
+        // apuntaba directo a worldcup26.ir (origen externo, lento e inestable).
+        // Los reapuntamos al results.json local servido por GitHub Pages.
+        if (typeof cfg.apiUrl === 'string' && /worldcup26\.ir/i.test(cfg.apiUrl)) {
+          cfg.apiUrl = DEFAULT_CONFIG.apiUrl;
+        }
+        return cfg;
       } catch {
         return { ...DEFAULT_CONFIG };
       }
@@ -1730,7 +1739,9 @@
       readConfigFromControls();
       if (!silent) setNotice('Actualizando marcadores...');
       try {
-        const response = await fetch(state.config.apiUrl, buildFetchOptions());
+        const baseUrl = state.config.apiUrl;
+        const bustedUrl = baseUrl + (baseUrl.includes('?') ? '&' : '?') + '_t=' + Date.now();
+        const response = await fetch(bustedUrl, buildFetchOptions());
         if (!response.ok) throw new Error(`HTTP ${response.status}: ${response.statusText}`);
         const raw = await response.json();
         state.lastRaw = raw;
