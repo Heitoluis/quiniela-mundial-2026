@@ -511,8 +511,8 @@
       "id": "24",
       "home_team_id": "47",
       "away_team_id": "48",
-      "home_score": "null",
-      "away_score": "null",
+      "home_score": "0",
+      "away_score": "0",
       "home_scorers": "null",
       "away_scorers": "null",
       "group": "L",
@@ -521,7 +521,7 @@
       "persian_date": "1405-03-27 19:00",
       "stadium_id": "12",
       "finished": "FALSE",
-      "time_elapsed": "notstarted",
+      "time_elapsed": "live",
       "type": "group",
       "home_team_name_en": "Ghana",
       "home_team_name_fa": "غنا",
@@ -2225,5 +2225,5 @@
       "away_team_label": "Winner Match 102"
     }
   ],
-  "updated_at": "2026-06-17T22:54:53Z"
+  "updated_at": "2026-06-18T00:20:13Z"
 }
