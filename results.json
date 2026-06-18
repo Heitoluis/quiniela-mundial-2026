@@ -608,8 +608,8 @@
       "local_date": "06/18/2026 12:00",
       "persian_date": "1405-03-28 12:00",
       "stadium_id": "7",
-      "finished": "FALSE",
-      "time_elapsed": "live",
+      "finished": "TRUE",
+      "time_elapsed": "finished",
       "type": "group",
       "home_team_name_en": "Czech Republic",
       "home_team_name_fa": "جمهوری چک",
@@ -2225,5 +2225,5 @@
       "away_team_label": "Winner Match 102"
     }
   ],
-  "updated_at": "2026-06-18T17:51:14Z"
+  "updated_at": "2026-06-18T18:02:06Z"
 }
