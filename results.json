@@ -621,9 +621,9 @@
       "id": "29",
       "home_team_id": "9",
       "away_team_id": "11",
-      "home_score": "1",
+      "home_score": "2",
       "away_score": "0",
-      "home_scorers": "{\"Matheus Cunha 23'\"}",
+      "home_scorers": "{\"Matheus Cunha 23'\",\"Matheus Cunha 36'\"}",
       "away_scorers": "null",
       "group": "C",
       "matchday": "2",
@@ -2225,5 +2225,5 @@
       "away_team_label": "Winner Match 102"
     }
   ],
-  "updated_at": "2026-06-20T01:06:53Z"
+  "updated_at": "2026-06-20T01:12:07Z"
 }
