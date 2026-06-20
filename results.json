@@ -652,8 +652,8 @@
       "local_date": "06/19/2026 18:00",
       "persian_date": "1405-03-29 18:00",
       "stadium_id": "9",
-      "finished": "FALSE",
-      "time_elapsed": "live",
+      "finished": "TRUE",
+      "time_elapsed": "finished",
       "type": "group",
       "home_team_name_en": "Scotland",
       "home_team_name_fa": "اسکاتلند",
@@ -2225,5 +2225,5 @@
       "away_team_label": "Winner Match 102"
     }
   ],
-  "updated_at": "2026-06-19T22:32:36Z"
+  "updated_at": "2026-06-20T00:03:04Z"
 }
