@@ -753,10 +753,10 @@
       "id": "35",
       "home_team_id": "21",
       "away_team_id": "23",
-      "home_score": "2",
+      "home_score": "4",
       "away_score": "0",
-      "home_scorers": "{\"Brian Brobbey 5'\",\"Brian Brobbey 17'\",\"Kvdi Khakpv 48'\"}",
-      "away_scorers": "null",
+      "home_scorers": "{\"Brian Brobbey 5'\",\"Brian Brobbey 17'\",\"Kvdi Khakpv 47'\",\"Kvdi Khakpv 54'\"}",
+      "away_scorers": "{\"Anthony Elanga 59'\"}",
       "group": "F",
       "matchday": "2",
       "local_date": "06/20/2026 12:00",
@@ -2229,5 +2229,5 @@
       "away_team_label": "Winner Match 102"
     }
   ],
-  "updated_at": "2026-06-20T18:09:46Z"
+  "updated_at": "2026-06-20T18:21:12Z"
 }
