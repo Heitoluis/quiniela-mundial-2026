@@ -709,8 +709,8 @@
       "id": "33",
       "home_team_id": "17",
       "away_team_id": "19",
-      "home_score": "null",
-      "away_score": "null",
+      "home_score": "0",
+      "away_score": "0",
       "home_scorers": "null",
       "away_scorers": "null",
       "group": "E",
@@ -719,7 +719,7 @@
       "persian_date": "1405-03-30 16:00",
       "stadium_id": "12",
       "finished": "FALSE",
-      "time_elapsed": "notstarted",
+      "time_elapsed": "live",
       "type": "group",
       "home_team_name_en": "Germany",
       "home_team_name_fa": "آلمان",
@@ -2229,5 +2229,5 @@
       "away_team_label": "Winner Match 102"
     }
   ],
-  "updated_at": "2026-06-20T19:32:15Z"
+  "updated_at": "2026-06-20T20:05:02Z"
 }
