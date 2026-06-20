@@ -710,9 +710,9 @@
       "home_team_id": "17",
       "away_team_id": "19",
       "home_score": "0",
-      "away_score": "0",
+      "away_score": "1",
       "home_scorers": "null",
-      "away_scorers": "null",
+      "away_scorers": "{\"Franck Kessié 30'\"}",
       "group": "E",
       "matchday": "2",
       "local_date": "06/20/2026 16:00",
@@ -2229,5 +2229,5 @@
       "away_team_label": "Winner Match 102"
     }
   ],
-  "updated_at": "2026-06-20T20:05:02Z"
+  "updated_at": "2026-06-20T20:42:27Z"
 }
