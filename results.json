@@ -709,17 +709,17 @@
       "id": "33",
       "home_team_id": "17",
       "away_team_id": "19",
-      "home_score": "1",
+      "home_score": "2",
       "away_score": "1",
-      "home_scorers": "{\"Dniz Avndav 68'\"}",
+      "home_scorers": "{\"Dniz Avndav 68'\",\"Dniz Avndav 90+4'\"}",
       "away_scorers": "{\"Franck Kessié 30'\"}",
       "group": "E",
       "matchday": "2",
       "local_date": "06/20/2026 16:00",
       "persian_date": "1405-03-30 16:00",
       "stadium_id": "12",
-      "finished": "FALSE",
-      "time_elapsed": "live",
+      "finished": "TRUE",
+      "time_elapsed": "finished",
       "type": "group",
       "home_team_name_en": "Germany",
       "home_team_name_fa": "آلمان",
@@ -2229,5 +2229,5 @@
       "away_team_label": "Winner Match 102"
     }
   ],
-  "updated_at": "2026-06-20T21:37:50Z"
+  "updated_at": "2026-06-20T22:11:51Z"
 }
