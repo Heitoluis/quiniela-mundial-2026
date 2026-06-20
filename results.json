@@ -753,9 +753,9 @@
       "id": "35",
       "home_team_id": "21",
       "away_team_id": "23",
-      "home_score": "4",
+      "home_score": "5",
       "away_score": "1",
-      "home_scorers": "{\"Brian Brobbey 5'\",\"Brian Brobbey 17'\",\"Kvdi Khakpv 47'\",\"Kvdi Khakpv 54'\"}",
+      "home_scorers": "{\"Brian Brobbey 5'\",\"Brian Brobbey 17'\",\"Kvdi Khakpv 47'\",\"Kvdi Khakpv 54'\",\"Krisnsiv Svmrvil 89'\"}",
       "away_scorers": "{\"Anthony Elanga 59'\"}",
       "group": "F",
       "matchday": "2",
@@ -2229,5 +2229,5 @@
       "away_team_label": "Winner Match 102"
     }
   ],
-  "updated_at": "2026-06-20T18:26:27Z"
+  "updated_at": "2026-06-20T18:54:36Z"
 }
