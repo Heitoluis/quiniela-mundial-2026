@@ -696,8 +696,8 @@
       "local_date": "06/19/2026 20:00",
       "persian_date": "1405-03-29 20:00",
       "stadium_id": "15",
-      "finished": "FALSE",
-      "time_elapsed": "live",
+      "finished": "TRUE",
+      "time_elapsed": "finished",
       "type": "group",
       "home_team_name_en": "Turkey",
       "home_team_name_fa": "ترکیه",
@@ -2225,5 +2225,5 @@
       "away_team_label": "Winner Match 102"
     }
   ],
-  "updated_at": "2026-06-20T03:04:15Z"
+  "updated_at": "2026-06-20T05:08:48Z"
 }
