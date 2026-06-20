@@ -1707,7 +1707,7 @@
     {
       "_id": "679c9c8a5749c4077500e079",
       "id": "79",
-      "home_team_id": "0",
+      "home_team_id": "1",
       "away_team_id": "0",
       "home_score": "0",
       "away_score": "0",
@@ -1722,7 +1722,9 @@
       "time_elapsed": "notstarted",
       "type": "r32",
       "home_team_label": "Winner Group A",
-      "away_team_label": "3rd Group C/E/F/H/I"
+      "away_team_label": "3rd Group C/E/F/H/I",
+      "home_team_name_en": "Mexico",
+      "home_team_name_fa": "مکزیک"
     },
     {
       "_id": "679c9c8a5749c4077500e07a",
@@ -1747,7 +1749,7 @@
     {
       "_id": "679c9c8a5749c4077500e07b",
       "id": "81",
-      "home_team_id": "0",
+      "home_team_id": "13",
       "away_team_id": "0",
       "home_score": "0",
       "away_score": "0",
@@ -1762,7 +1764,9 @@
       "time_elapsed": "notstarted",
       "type": "r32",
       "home_team_label": "Winner Group D",
-      "away_team_label": "3rd Group B/E/F/I/J"
+      "away_team_label": "3rd Group B/E/F/I/J",
+      "home_team_name_en": "United States",
+      "home_team_name_fa": "آمریکا"
     },
     {
       "_id": "679c9c8a5749c4077500e07c",
@@ -2225,5 +2229,5 @@
       "away_team_label": "Winner Match 102"
     }
   ],
-  "updated_at": "2026-06-20T05:08:48Z"
+  "updated_at": "2026-06-20T07:16:28Z"
 }
