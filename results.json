@@ -740,8 +740,8 @@
       "local_date": "06/20/2026 19:00",
       "persian_date": "1405-03-30 19:00",
       "stadium_id": "6",
-      "finished": "FALSE",
-      "time_elapsed": "live",
+      "finished": "TRUE",
+      "time_elapsed": "finished",
       "type": "group",
       "home_team_name_en": "Ecuador",
       "home_team_name_fa": "اکوادور",
@@ -2229,5 +2229,5 @@
       "away_team_label": "Winner Match 102"
     }
   ],
-  "updated_at": "2026-06-21T00:08:52Z"
+  "updated_at": "2026-06-21T02:00:11Z"
 }
