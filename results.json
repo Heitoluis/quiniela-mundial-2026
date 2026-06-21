@@ -307,7 +307,7 @@
     {
       "home_team_name_en": "Uruguay",
       "away_team_name_en": "Cape Verde",
-      "home_score": "0",
+      "home_score": "1",
       "away_score": "1",
       "finished": "FALSE",
       "time_elapsed": "live"
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-06-21T22:25:22Z",
+  "updated_at": "2026-06-21T22:45:24Z",
   "source": "espn"
 }
