@@ -1,11 +1,14 @@
 name: Actualizar resultados
 
-# IMPORTANTE: los workflows con 'schedule' (cron) en GitHub son de baja
-# prioridad: se retrasan horas o se saltan, sobre todo los de alta frecuencia.
-# Por eso NO confiamos en que el cron corra cada 5 min. En su lugar, un solo job
-# se mantiene vivo ~5h40m y hace fetch+commit cada 5 min internamente (en repos
-# publicos el tiempo de Actions es gratis/ilimitado). El cron solo sirve para
-# relanzar el job cuando termina; la concurrencia evita que corran dos a la vez.
+# Mantiene results.json al dia consultando, en orden:
+#   1) ESPN (FIFA World Cup) - gratis, sin key, confiable y con datos en vivo.
+#   2) worldcup26.ir - respaldo, por si ESPN fallara.
+# La salida siempre tiene el formato { games: [...] } que la pagina ya entiende
+# (empareja por nombre de equipo), asi que index.html no requiere cambios.
+#
+# Nota: los workflows 'schedule' de GitHub son de baja prioridad (se retrasan o
+# se saltan). Por eso un solo job se mantiene vivo ~5h40m y refresca cada 5 min;
+# el cron solo lo relanza al terminar. Gratis por ser repo publico.
 
 on:
   schedule:
@@ -30,50 +33,60 @@ jobs:
       - name: Bucle de actualizacion (cada ~5 min durante ~5h40m)
         run: |
           set +e
-          API="https://worldcup26.ir/get/games"
+          ESPN="https://site.api.espn.com/apis/site/v2/sports/soccer/fifa.world/scoreboard?dates=20260611-20260719&limit=200"
+          WC="https://worldcup26.ir/get/games"
+
+          # ESPN -> formato { games: [{home_team_name_en, away_team_name_en, home_score, away_score, finished, time_elapsed}] }
+          ESPN_JQ='{games: [.events[] | .competitions[0] as $c | ($c.competitors[] | select(.homeAway=="home")) as $h | ($c.competitors[] | select(.homeAway=="away")) as $a | {home_team_name_en: $h.team.displayName, away_team_name_en: $a.team.displayName, home_score: (($h.score // "") | tostring), away_score: (($a.score // "") | tostring), finished: (if .status.type.completed then "TRUE" else "FALSE" end), time_elapsed: (if .status.type.completed then "finished" elif .status.type.name == "STATUS_SCHEDULED" then "notstarted" else "live" end)}]}'
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          END=$(( $(date +%s) + 340*60 ))   # ~5h40m; deja margen al timeout de 350
+          END=$(( $(date +%s) + 340*60 ))   # ~5h40m
           iter=0
           while [ "$(date +%s)" -lt "$END" ]; do
             iter=$((iter+1))
+            src=""
 
-            # 1) Descargar con reintentos (el servidor externo es lento/inestable)
-            ok=0
-            for i in 1 2 3 4 5 6; do
-              code=$(curl -s -m 60 \
-                -H "Accept: application/json" \
-                -H "Origin: https://heitoluis.github.io" \
-                -o results.new.json -w "%{http_code}" "$API" || echo 000)
-              if [ "$code" = "200" ] && jq -e '.games | length > 0' results.new.json >/dev/null 2>&1; then
-                ok=1; break
+            # 1) Fuente primaria: ESPN
+            code=$(curl -s -m 45 --retry 2 --retry-delay 3 -o espn.json -w "%{http_code}" "$ESPN" || echo 000)
+            if [ "$code" = "200" ] && jq -e '.events | length > 0' espn.json >/dev/null 2>&1; then
+              if jq "$ESPN_JQ" espn.json > cand.json 2>/dev/null && jq -e '.games | length > 0' cand.json >/dev/null 2>&1; then
+                src="espn"
               fi
-              sleep 10
-            done
+            fi
 
-            if [ "$ok" != "1" ]; then
-              echo "[$(date -u +%T)] iter $iter: fetch fallido, se conserva lo anterior."
+            # 2) Respaldo: worldcup26.ir (se usa tal cual, mismo formato)
+            if [ -z "$src" ]; then
+              code=$(curl -s -m 60 -H "Accept: application/json" -H "Origin: https://heitoluis.github.io" -o wc.json -w "%{http_code}" "$WC" || echo 000)
+              if [ "$code" = "200" ] && jq -e '.games | length > 0' wc.json >/dev/null 2>&1; then
+                cp wc.json cand.json
+                src="worldcup26"
+              fi
+            fi
+
+            if [ -z "$src" ]; then
+              echo "[$(date -u +%T)] iter $iter: ambas fuentes fallaron; se conserva lo anterior."
             else
-              # 2) Commit solo si cambiaron los marcadores (evita reconstruir Pages de mas)
-              git show HEAD:results.json 2>/dev/null | jq -S '.games' > prev_games.json 2>/dev/null || echo 'null' > prev_games.json
-              jq -S '.games' results.new.json > curr_games.json
-              if cmp -s prev_games.json curr_games.json; then
-                echo "[$(date -u +%T)] iter $iter: sin cambios."
+              # Commit solo si cambiaron los marcadores
+              git show HEAD:results.json 2>/dev/null | jq -S '.games' > prev.json 2>/dev/null || echo null > prev.json
+              jq -S '.games' cand.json > curr.json
+              if cmp -s prev.json curr.json; then
+                echo "[$(date -u +%T)] iter $iter: sin cambios (fuente=$src)."
               else
-                jq --arg ts "$(date -u +%FT%TZ)" '. + {updated_at: $ts}' results.new.json > results.json
+                jq --arg ts "$(date -u +%FT%TZ)" --arg src "$src" '. + {updated_at: $ts, source: $src}' cand.json > results.json
                 git add results.json
-                git commit -m "Actualizar resultados" >/dev/null 2>&1
+                git commit -m "Actualizar resultados ($src)" >/dev/null 2>&1
                 git pull --rebase --autostash origin main >/dev/null 2>&1
                 if git push origin HEAD:main >/dev/null 2>&1; then
-                  echo "[$(date -u +%T)] iter $iter: actualizado y publicado."
+                  echo "[$(date -u +%T)] iter $iter: publicado (fuente=$src)."
                 else
-                  echo "::warning::[$(date -u +%T)] iter $iter: push fallido, se reintenta en la siguiente vuelta."
+                  echo "::warning::[$(date -u +%T)] iter $iter: push fallido, se reintenta luego."
                 fi
               fi
             fi
 
-            rm -f results.new.json prev_games.json curr_games.json
-            sleep 300   # 5 minutos
+            rm -f espn.json wc.json cand.json prev.json curr.json
+            sleep 300
           done
           echo "Fin del bucle; el cron relanzara el job."
