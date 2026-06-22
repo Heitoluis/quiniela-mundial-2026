@@ -309,8 +309,8 @@
       "away_team_name_en": "Cape Verde",
       "home_score": "2",
       "away_score": "2",
-      "finished": "FALSE",
-      "time_elapsed": "live"
+      "finished": "TRUE",
+      "time_elapsed": "finished"
     },
     {
       "home_team_name_en": "New Zealand",
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-06-21T23:30:29Z",
+  "updated_at": "2026-06-22T00:05:32Z",
   "source": "espn"
 }
