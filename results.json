@@ -316,7 +316,7 @@
       "home_team_name_en": "New Zealand",
       "away_team_name_en": "Egypt",
       "home_score": "1",
-      "away_score": "1",
+      "away_score": "2",
       "finished": "FALSE",
       "time_elapsed": "live"
     },
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-06-22T02:20:50Z",
+  "updated_at": "2026-06-22T02:30:52Z",
   "source": "espn"
 }
