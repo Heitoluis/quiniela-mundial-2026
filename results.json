@@ -341,8 +341,8 @@
       "away_team_name_en": "Senegal",
       "home_score": "3",
       "away_score": "2",
-      "finished": "FALSE",
-      "time_elapsed": "live"
+      "finished": "TRUE",
+      "time_elapsed": "finished"
     },
     {
       "home_team_name_en": "Jordan",
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-06-23T01:52:48Z",
+  "updated_at": "2026-06-23T02:02:50Z",
   "source": "espn"
 }
