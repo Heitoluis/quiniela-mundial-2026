@@ -389,16 +389,16 @@
       "away_team_name_en": "Qatar",
       "home_score": "3",
       "away_score": "1",
-      "finished": "FALSE",
-      "time_elapsed": "live"
+      "finished": "TRUE",
+      "time_elapsed": "finished"
     },
     {
       "home_team_name_en": "Switzerland",
       "away_team_name_en": "Canada",
       "home_score": "2",
       "away_score": "1",
-      "finished": "FALSE",
-      "time_elapsed": "live"
+      "finished": "TRUE",
+      "time_elapsed": "finished"
     },
     {
       "home_team_name_en": "Morocco",
@@ -578,7 +578,7 @@
     },
     {
       "home_team_name_en": "Group A 2nd Place",
-      "away_team_name_en": "Group B 2nd Place",
+      "away_team_name_en": "Canada",
       "home_score": "0",
       "away_score": "0",
       "finished": "FALSE",
@@ -673,7 +673,7 @@
       "time_elapsed": "notstarted"
     },
     {
-      "home_team_name_en": "Group B Winner",
+      "home_team_name_en": "Switzerland",
       "away_team_name_en": "Third Place Group E/F/G/I/J",
       "home_score": "0",
       "away_score": "0",
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-06-24T20:46:14Z",
+  "updated_at": "2026-06-24T21:01:21Z",
   "source": "espn"
 }
