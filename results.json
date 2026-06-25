@@ -437,16 +437,16 @@
       "away_team_name_en": "Ivory Coast",
       "home_score": "0",
       "away_score": "2",
-      "finished": "FALSE",
-      "time_elapsed": "live"
+      "finished": "TRUE",
+      "time_elapsed": "finished"
     },
     {
       "home_team_name_en": "Ecuador",
       "away_team_name_en": "Germany",
       "home_score": "2",
       "away_score": "1",
-      "finished": "FALSE",
-      "time_elapsed": "live"
+      "finished": "TRUE",
+      "time_elapsed": "finished"
     },
     {
       "home_team_name_en": "Japan",
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-06-25T21:43:53Z",
+  "updated_at": "2026-06-25T21:58:55Z",
   "source": "espn"
 }
