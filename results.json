@@ -420,7 +420,7 @@
       "home_team_name_en": "Czechia",
       "away_team_name_en": "Mexico",
       "home_score": "0",
-      "away_score": "2",
+      "away_score": "3",
       "finished": "FALSE",
       "time_elapsed": "live"
     },
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-06-25T02:26:56Z",
+  "updated_at": "2026-06-25T02:57:06Z",
   "source": "espn"
 }
