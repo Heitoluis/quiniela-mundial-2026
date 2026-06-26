@@ -459,7 +459,7 @@
     {
       "home_team_name_en": "Tunisia",
       "away_team_name_en": "Netherlands",
-      "home_score": "0",
+      "home_score": "1",
       "away_score": "2",
       "finished": "FALSE",
       "time_elapsed": "live"
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-06-25T23:09:04Z",
+  "updated_at": "2026-06-26T00:14:10Z",
   "source": "espn"
 }
