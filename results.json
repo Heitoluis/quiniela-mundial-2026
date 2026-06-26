@@ -484,9 +484,9 @@
       "home_team_name_en": "Norway",
       "away_team_name_en": "France",
       "home_score": "1",
-      "away_score": "3",
-      "finished": "FALSE",
-      "time_elapsed": "live"
+      "away_score": "4",
+      "finished": "TRUE",
+      "time_elapsed": "finished"
     },
     {
       "home_team_name_en": "Senegal",
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-06-26T20:51:27Z",
+  "updated_at": "2026-06-26T21:01:29Z",
   "source": "espn"
 }
