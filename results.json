@@ -453,16 +453,16 @@
       "away_team_name_en": "Sweden",
       "home_score": "1",
       "away_score": "1",
-      "finished": "FALSE",
-      "time_elapsed": "live"
+      "finished": "TRUE",
+      "time_elapsed": "finished"
     },
     {
       "home_team_name_en": "Tunisia",
       "away_team_name_en": "Netherlands",
       "home_score": "1",
       "away_score": "3",
-      "finished": "FALSE",
-      "time_elapsed": "live"
+      "finished": "TRUE",
+      "time_elapsed": "finished"
     },
     {
       "home_team_name_en": "Paraguay",
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-06-26T00:24:14Z",
+  "updated_at": "2026-06-26T00:59:18Z",
   "source": "espn"
 }
