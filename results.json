@@ -484,7 +484,7 @@
       "home_team_name_en": "Norway",
       "away_team_name_en": "France",
       "home_score": "1",
-      "away_score": "2",
+      "away_score": "3",
       "finished": "FALSE",
       "time_elapsed": "live"
     },
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-06-26T19:26:19Z",
+  "updated_at": "2026-06-26T19:36:21Z",
   "source": "espn"
 }
