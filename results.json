@@ -476,7 +476,7 @@
       "home_team_name_en": "Türkiye",
       "away_team_name_en": "United States",
       "home_score": "2",
-      "away_score": "1",
+      "away_score": "2",
       "finished": "FALSE",
       "time_elapsed": "live"
     },
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-06-26T02:34:41Z",
+  "updated_at": "2026-06-26T03:14:46Z",
   "source": "espn"
 }
