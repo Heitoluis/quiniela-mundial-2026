@@ -524,7 +524,7 @@
       "home_team_name_en": "New Zealand",
       "away_team_name_en": "Belgium",
       "home_score": "0",
-      "away_score": "1",
+      "away_score": "2",
       "finished": "FALSE",
       "time_elapsed": "live"
     },
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-06-27T03:32:08Z",
+  "updated_at": "2026-06-27T04:17:11Z",
   "source": "espn"
 }
