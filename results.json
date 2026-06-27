@@ -531,7 +531,7 @@
     {
       "home_team_name_en": "Croatia",
       "away_team_name_en": "Ghana",
-      "home_score": "0",
+      "home_score": "1",
       "away_score": "0",
       "finished": "FALSE",
       "time_elapsed": "live"
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-06-27T21:03:46Z",
+  "updated_at": "2026-06-27T21:33:50Z",
   "source": "espn"
 }
