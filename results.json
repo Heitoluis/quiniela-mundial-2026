@@ -582,7 +582,7 @@
       "home_score": "0",
       "away_score": "0",
       "finished": "FALSE",
-      "time_elapsed": "notstarted"
+      "time_elapsed": "live"
     },
     {
       "home_team_name_en": "Brazil",
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-06-28T04:04:53Z",
+  "updated_at": "2026-06-28T19:01:05Z",
   "source": "espn"
 }
