@@ -555,7 +555,7 @@
     {
       "home_team_name_en": "Congo DR",
       "away_team_name_en": "Uzbekistan",
-      "home_score": "1",
+      "home_score": "2",
       "away_score": "1",
       "finished": "FALSE",
       "time_elapsed": "live"
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-06-28T01:04:26Z",
+  "updated_at": "2026-06-28T01:14:28Z",
   "source": "espn"
 }
