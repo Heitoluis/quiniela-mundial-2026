@@ -572,7 +572,7 @@
       "home_team_name_en": "Jordan",
       "away_team_name_en": "Argentina",
       "home_score": "0",
-      "away_score": "1",
+      "away_score": "2",
       "finished": "FALSE",
       "time_elapsed": "live"
     },
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-06-28T02:29:38Z",
+  "updated_at": "2026-06-28T02:34:39Z",
   "source": "espn"
 }
