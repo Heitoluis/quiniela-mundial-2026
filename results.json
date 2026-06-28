@@ -564,14 +564,14 @@
       "home_team_name_en": "Algeria",
       "away_team_name_en": "Austria",
       "home_score": "1",
-      "away_score": "1",
+      "away_score": "2",
       "finished": "FALSE",
       "time_elapsed": "live"
     },
     {
       "home_team_name_en": "Jordan",
       "away_team_name_en": "Argentina",
-      "home_score": "0",
+      "home_score": "1",
       "away_score": "2",
       "finished": "FALSE",
       "time_elapsed": "live"
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-06-28T02:49:42Z",
+  "updated_at": "2026-06-28T03:19:44Z",
   "source": "espn"
 }
