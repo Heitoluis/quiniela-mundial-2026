@@ -595,7 +595,7 @@
     {
       "home_team_name_en": "Germany",
       "away_team_name_en": "Paraguay",
-      "home_score": "2",
+      "home_score": "1",
       "away_score": "1",
       "finished": "FALSE",
       "time_elapsed": "live"
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-06-29T22:48:10Z",
+  "updated_at": "2026-06-29T22:53:12Z",
   "source": "espn"
 }
