@@ -587,7 +587,7 @@
     {
       "home_team_name_en": "Brazil",
       "away_team_name_en": "Japan",
-      "home_score": "1",
+      "home_score": "2",
       "away_score": "1",
       "finished": "FALSE",
       "time_elapsed": "live"
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-06-29T18:17:45Z",
+  "updated_at": "2026-06-29T19:02:48Z",
   "source": "espn"
 }
