@@ -589,8 +589,8 @@
       "away_team_name_en": "Japan",
       "home_score": "2",
       "away_score": "1",
-      "finished": "FALSE",
-      "time_elapsed": "live"
+      "finished": "TRUE",
+      "time_elapsed": "finished"
     },
     {
       "home_team_name_en": "Germany",
@@ -721,7 +721,7 @@
       "time_elapsed": "notstarted"
     },
     {
-      "home_team_name_en": "Round of 32 4 Winner",
+      "home_team_name_en": "Brazil",
       "away_team_name_en": "Round of 32 6 Winner",
       "home_score": "0",
       "away_score": "0",
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-06-29T19:02:48Z",
+  "updated_at": "2026-06-29T19:07:49Z",
   "source": "espn"
 }
