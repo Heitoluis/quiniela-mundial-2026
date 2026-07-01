@@ -644,7 +644,7 @@
       "home_team_name_en": "Belgium",
       "away_team_name_en": "Senegal",
       "home_score": "0",
-      "away_score": "1",
+      "away_score": "2",
       "finished": "FALSE",
       "time_elapsed": "live"
     },
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-07-01T20:27:24Z",
+  "updated_at": "2026-07-01T21:17:28Z",
   "source": "espn"
 }
