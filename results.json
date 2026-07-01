@@ -635,7 +635,7 @@
     {
       "home_team_name_en": "England",
       "away_team_name_en": "Congo DR",
-      "home_score": "0",
+      "home_score": "1",
       "away_score": "1",
       "finished": "FALSE",
       "time_elapsed": "live"
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-07-01T16:11:57Z",
+  "updated_at": "2026-07-01T17:42:12Z",
   "source": "espn"
 }
