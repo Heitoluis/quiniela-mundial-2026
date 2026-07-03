@@ -668,7 +668,7 @@
       "home_team_name_en": "Portugal",
       "away_team_name_en": "Croatia",
       "home_score": "2",
-      "away_score": "1",
+      "away_score": "2",
       "finished": "FALSE",
       "time_elapsed": "live"
     },
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-07-03T00:55:16Z",
+  "updated_at": "2026-07-03T01:05:18Z",
   "source": "espn"
 }
