@@ -708,7 +708,7 @@
       "home_team_name_en": "Canada",
       "away_team_name_en": "Morocco",
       "home_score": "0",
-      "away_score": "2",
+      "away_score": "3",
       "finished": "FALSE",
       "time_elapsed": "live"
     },
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-07-04T18:48:43Z",
+  "updated_at": "2026-07-04T19:03:45Z",
   "source": "espn"
 }
