@@ -691,7 +691,7 @@
     {
       "home_team_name_en": "Argentina",
       "away_team_name_en": "Cape Verde",
-      "home_score": "2",
+      "home_score": "3",
       "away_score": "2",
       "finished": "FALSE",
       "time_elapsed": "live"
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-07-04T00:22:25Z",
+  "updated_at": "2026-07-04T00:37:27Z",
   "source": "espn"
 }
