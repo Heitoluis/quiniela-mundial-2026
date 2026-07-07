@@ -748,7 +748,7 @@
       "home_team_name_en": "United States",
       "away_team_name_en": "Belgium",
       "home_score": "1",
-      "away_score": "3",
+      "away_score": "4",
       "finished": "FALSE",
       "time_elapsed": "live"
     },
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-07-07T01:23:15Z",
+  "updated_at": "2026-07-07T01:58:20Z",
   "source": "espn"
 }
