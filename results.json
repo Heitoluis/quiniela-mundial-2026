@@ -798,7 +798,7 @@
       "home_score": "0",
       "away_score": "0",
       "finished": "FALSE",
-      "time_elapsed": "notstarted"
+      "time_elapsed": "live"
     },
     {
       "home_team_name_en": "France",
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-07-11T23:50:51Z",
+  "updated_at": "2026-07-12T01:05:56Z",
   "source": "espn"
 }
