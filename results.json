@@ -805,8 +805,8 @@
       "away_team_name_en": "Spain",
       "home_score": "0",
       "away_score": "2",
-      "finished": "FALSE",
-      "time_elapsed": "live"
+      "finished": "TRUE",
+      "time_elapsed": "finished"
     },
     {
       "home_team_name_en": "England",
@@ -833,6 +833,6 @@
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-07-14T20:21:44Z",
+  "updated_at": "2026-07-14T21:01:59Z",
   "source": "espn"
 }
