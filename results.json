@@ -813,12 +813,12 @@
       "away_team_name_en": "Argentina",
       "home_score": "1",
       "away_score": "2",
-      "finished": "FALSE",
-      "time_elapsed": "live"
+      "finished": "TRUE",
+      "time_elapsed": "finished"
     },
     {
       "home_team_name_en": "France",
-      "away_team_name_en": "Semifinal 2 Loser",
+      "away_team_name_en": "England",
       "home_score": "0",
       "away_score": "0",
       "finished": "FALSE",
@@ -826,13 +826,13 @@
     },
     {
       "home_team_name_en": "Spain",
-      "away_team_name_en": "Semifinal 2 Winner",
+      "away_team_name_en": "Argentina",
       "home_score": "0",
       "away_score": "0",
       "finished": "FALSE",
       "time_elapsed": "notstarted"
     }
   ],
-  "updated_at": "2026-07-15T20:54:11Z",
+  "updated_at": "2026-07-15T21:04:14Z",
   "source": "espn"
 }
