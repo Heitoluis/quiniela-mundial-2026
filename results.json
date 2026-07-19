@@ -829,10 +829,10 @@
       "away_team_name_en": "Argentina",
       "home_score": "1",
       "away_score": "0",
-      "finished": "FALSE",
-      "time_elapsed": "live"
+      "finished": "TRUE",
+      "time_elapsed": "finished"
     }
   ],
-  "updated_at": "2026-07-19T21:44:22Z",
+  "updated_at": "2026-07-19T22:04:24Z",
   "source": "espn"
 }
