@@ -827,12 +827,12 @@
     {
       "home_team_name_en": "Spain",
       "away_team_name_en": "Argentina",
-      "home_score": "0",
+      "home_score": "1",
       "away_score": "0",
       "finished": "FALSE",
       "time_elapsed": "live"
     }
   ],
-  "updated_at": "2026-07-19T19:09:07Z",
+  "updated_at": "2026-07-19T21:44:22Z",
   "source": "espn"
 }
